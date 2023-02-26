@@ -150,10 +150,15 @@ for printing start formula =((2*i)+1)
         pat.printInverseTriangle();
 
     }
+    public void printHalfDiamond(){
+        FiveStartPattern pattern=new FiveStartPattern();
+        pattern.printLeftAngledTriangle();
+        pattern.printLeftAngledTriangleInReverse();
+    }
 
 
     public static void main(String[] args) {
         FiveStartPattern pat = new FiveStartPattern();
-        pat.printDiamond();
+        pat.printHalfDiamond();
     }
 }
