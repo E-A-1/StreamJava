@@ -104,9 +104,56 @@ for printing start formula =((2*i)+1)
             System.out.println("");
         }
     }
+    /*
+
+***********
+ *********
+  *******
+   *****
+    ***
+     *
+     
+     */
+    public void printInverseTriangle() {
+        for (int i = 5; i >= 0; i--) {
+            for (int j = 0; j <= (5 - i - 1); j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= ((2 * i) + 1); k++) {
+                System.out.print("*");
+            }
+            for (int z = 0; z <= (5 - i - 1); z++) {
+                System.out.print(" ");
+            }
+
+            System.out.println("");
+        }
+    }
+
+/*
+     *     
+    ***
+   *****
+  *******
+ *********
+***********
+ *********
+  *******
+   *****
+    ***
+     *
+ */
+
+    public void printDiamond(){
+        FiveStartPattern pat = new FiveStartPattern();
+        pat.printTriangle();
+        pat.printInverseTriangle();
+
+    }
+
 
     public static void main(String[] args) {
         FiveStartPattern pat = new FiveStartPattern();
-        pat.printTriangle();
+        pat.printDiamond();
     }
 }
