@@ -8,6 +8,7 @@ public class StreamSources {
 public static Stream<String> stringNumbersStream(){
     return Stream.of("one","two","three","four","five");
 }
+
 public static Stream<Integer> intNumberStreams(){
     return Stream.of(1,2,5,4,8,2);
 }
