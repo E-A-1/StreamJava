@@ -1,4 +1,4 @@
-package recusrion;
+package recusrion.easy;
 
 public class FactorialRecursion {
 
@@ -12,12 +12,12 @@ public class FactorialRecursion {
         return factorial(num - 1, factorialValue);
     }
 
-    static int factorialParameterized(int num){
-        if(num==0){
+    static int factorialParameterized(int num) {
+        if (num == 0) {
             return 1;
         }
 
-        return num*factorialParameterized(num-1);
+        return num * factorialParameterized(num - 1);
     }
 
     public static void main(String[] args) {

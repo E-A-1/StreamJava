@@ -1,4 +1,4 @@
-package array;
+package array.easy;
 
 import java.util.Arrays;
 
@@ -25,20 +25,20 @@ public class LargestElementInAnArray {
         return maxNumber;
     }
 
-    private static void findMaxElementAlternative(int arr[]){
-        int maxElement=Integer.MIN_VALUE;
-        int smallElement=Integer.MAX_VALUE;
+    private static void findMaxElementAlternative(int arr[]) {
+        int maxElement = Integer.MIN_VALUE;
+        int smallElement = Integer.MAX_VALUE;
 
-        for(int i=0;i<arr.length;i++){
-            smallElement=Math.min(smallElement, arr[i]);
+        for (int i = 0; i < arr.length; i++) {
+            smallElement = Math.min(smallElement, arr[i]);
         }
 
-        for(int i=0;i<arr.length;i++){
-            maxElement=Math.max(maxElement, arr[i]);
+        for (int i = 0; i < arr.length; i++) {
+            maxElement = Math.max(maxElement, arr[i]);
         }
 
-        System.out.println("Max element "+maxElement);
-        System.out.println("Min element "+smallElement);
+        System.out.println("Max element " + maxElement);
+        System.out.println("Min element " + smallElement);
     }
 
     public static void main(String[] args) {
@@ -53,7 +53,7 @@ public class LargestElementInAnArray {
 
         Arrays.sort(arr);
 
-         LargestElementInAnArray.findMaxElementAlternative(arr);
+        LargestElementInAnArray.findMaxElementAlternative(arr);
     }
 
 }

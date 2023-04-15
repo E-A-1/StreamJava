@@ -1,16 +1,17 @@
-package recusrion;
+package recusrion.easy;
 
 public class PrintNTimes {
-    static void printNTimes(int n){
+    static void printNTimes(int n) {
         System.out.println(n);
-        if(n>0){
-          n--;
+        if (n > 0) {
+            n--;
             printNTimes(n);
-        }else{
+        } else {
             return;
 
         }
     }
+
     public static void main(String[] args) {
         PrintNTimes.printNTimes(5);
     }

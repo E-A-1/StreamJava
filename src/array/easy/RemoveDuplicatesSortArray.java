@@ -1,4 +1,4 @@
-package array;
+package array.easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,18 +22,18 @@ public class RemoveDuplicatesSortArray {
         return newArray;
     }
 
-
-    public static int removeDuplicatedWithoutCol(int arr[]){
-        int i=0;
-        for(int j=1;j<arr.length;j++){
-            if(arr[i]!=arr[j]){
+    public static int removeDuplicatedWithoutCol(int arr[]) {
+        int i = 0;
+        for (int j = 1; j < arr.length; j++) {
+            if (arr[i] != arr[j]) {
                 i++;
-                arr[i]=arr[j];
+                arr[i] = arr[j];
             }
         }
 
-        return i+1;
+        return i + 1;
     }
+
     public static void main(String[] args) {
         int arr[] = { 1, 1, 2, 2, 3, 6, 8, 9, 15, 16 };
         int newArray[] = RemoveDuplicatesSortArray.removeDuplicates(arr);

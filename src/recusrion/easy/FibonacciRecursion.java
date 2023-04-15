@@ -1,4 +1,4 @@
-package recusrion;
+package recusrion.easy;
 
 import java.util.Arrays;
 
