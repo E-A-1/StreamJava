@@ -1,6 +1,7 @@
 package array.easy;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class ReplaceZerosInArray {
     // Brute Force
@@ -9,6 +10,7 @@ public class ReplaceZerosInArray {
 
     // Space complexity: o(n)
     public static void zerosToEnd(int[] arr) {
+        HashMap<Integer, Integer> freq = new HashMap<>();
 
         int n = arr.length;
         int temp[] = new int[n];
