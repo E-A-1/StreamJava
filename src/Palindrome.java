@@ -10,7 +10,7 @@ class Palindrome {
         String reversedString = "";
         char[] charArray = inputString.toCharArray();
         for (int i = inputString.length() - 1; i >= 0; i--) {
-            reversedString = reversedString + charArray[i];
+            reversedString = reversedString + inputString.charAt(i);
         }
         System.out.println(reversedString.toLowerCase());
         System.out.println(inputString.toLowerCase());

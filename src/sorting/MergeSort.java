@@ -13,13 +13,14 @@ public class MergeSort implements MergeInterface {
 
     @Override
     public void mergeSort(int[] arr, int low, int high) {
-System.out.println("merge sort");
-System.out.println("arr  ::"+Arrays.toString(arr)+"low ------ "+low+" ---- high ----"+high);
+        System.out.println("merge sort");
         if (low >= high) {
             return;
         }
 
         int mid = (low + high) / 2;
+        System.out.println("arr  ::" + Arrays.toString(arr) + "low ------ " + low + " ---- high ----" + high
+                + " ----------- mid" + mid);
 
         mergeSort(arr, low, mid);
         mergeSort(arr, mid + 1, high);
@@ -58,14 +59,14 @@ System.out.println("arr  ::"+Arrays.toString(arr)+"low ------ "+low+" ---- high 
         }
 
         for (int i = low; i <= high; i++) {
-            arr[i] = tempArray.get(i-low);
+            arr[i] = tempArray.get(i - low);
         }
     }
 
     public static void main(String[] args) {
-        int arr[]={5,9,4,8,3,7,5,1,6,4};
-        MergeSort sort=new MergeSort();
-        sort.mergeSort(arr, 0, arr.length-1);
+        int arr[] = { 5, 9, 4, 8, 3, 7, 5, 1, 6, 4 };
+        MergeSort sort = new MergeSort();
+        sort.mergeSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 }
