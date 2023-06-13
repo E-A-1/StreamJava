@@ -17,14 +17,12 @@ public class LongestWord {
         // find the max length of the word
 
         for (int i = 0; i < wordArray.length; i++) {
-            maxLength = Math.max(maxLength, wordArray[i].length());
-        }
-        // check the any length of the word in a word array matches the given length ,
-        // if matches return the word
-        for (int i = 0; i < wordArray.length; i++) {
-            if (wordArray[i].length() == maxLength) {
+            if (wordArray[i].length() > maxLength) {
+                // if the current word length is greater than maxLength, then update the
+                // maxlength and
+                // assign the word to the result
+                maxLength = Math.max(maxLength, wordArray[i].length());
                 result = wordArray[i];
-                return result;
             }
         }
 
@@ -32,6 +30,6 @@ public class LongestWord {
     }
 
     public static void main(String[] args) {
-        System.out.println(LongestWord.getLongestWord("I am running am hello"));
+        System.out.println(LongestWord.getLongestWord("I am running nunning am hello"));
     }
 }
