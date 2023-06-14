@@ -2,7 +2,7 @@ package binarySearch.easy;
 
 public class BinarySearch {
 
-    private static void searchElement(int arr[], int start, int end, int elementToFind) {
+    public static void searchElement(int arr[], int start, int end, int elementToFind) {
         System.out.println("Iterations");
         if (start == end) {
             System.out.println("start -> " + start + " end -> " + end + " element not found-> ");
