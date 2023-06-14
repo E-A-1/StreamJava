@@ -8,6 +8,7 @@ public class AsterickCheck {
         boolean isConditionMet = true;
         // Splitting the input based on * (asterisk), getting the wordArray
         String[] wordArray = inputString.split("\\*");
+
         System.out.println(wordArray.length);
         for (int i = 0; i < wordArray.length - 1; i++) {
             System.out.println(i);
@@ -39,7 +40,7 @@ public class AsterickCheck {
     }
 
     public static void main(String[] args) {
-        String inputValue = "Welcome*elijja*avprincy*yes";
+        String inputValue = "WelcomE*elija*avprincy*no";
         System.out.println(AsterickCheck.checkAsterickSameCharCondition(inputValue));
     }
 }
