@@ -1,7 +1,9 @@
 package practicePrincy;
 
 public class AsterickCheck {
-
+    /*
+     * Asterisk sum
+     */
     public static boolean checkAsterickSameCharCondition(String inputString) {
         boolean isConditionMet = true;
         // Splitting the input based on * (asterisk), getting the wordArray
@@ -23,6 +25,7 @@ public class AsterickCheck {
             char currentWordsLastCharacter = Character.toLowerCase(currentWord.charAt(currentWord.length() - 1));
             char nextWordsFirstCharacter = Character
                     .toLowerCase(nextWordToCompare.charAt(0));
+
             System.out.println("currentWord ->" + currentWord + "last char ->" + currentWordsLastCharacter);
             System.out.println("nextWord->" + nextWordToCompare + "first char -> " + nextWordsFirstCharacter);
 
