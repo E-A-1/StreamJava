@@ -32,6 +32,8 @@ public class BinarySearchWithArrayInput {
             System.out.print(element + " ");
         }
 
+        scanner.close();
+
         return inputArray;
 
     }

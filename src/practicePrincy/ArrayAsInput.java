@@ -35,6 +35,7 @@ public class ArrayAsInput {
         for (int element : inputArray) {
             System.out.print(element + " ");
         }
+
         System.out.println(" ");
         System.out.println("Enter the element to find");
 
