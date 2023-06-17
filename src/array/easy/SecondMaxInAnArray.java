@@ -4,6 +4,23 @@ import java.util.Arrays;
 
 public class SecondMaxInAnArray {
 
+    static private void findLargestAndSecondLargestInAnArray(int[] arr) {
+        int maxElement = Integer.MIN_VALUE;
+        int secondMaxElement = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > maxElement) {
+                secondMaxElement = maxElement;
+
+                maxElement = arr[i];
+            } else if (arr[i] > secondMaxElement && arr[i] != maxElement) {
+                secondMaxElement = arr[i];
+            }
+        }
+
+        System.out.println("the max element is " + maxElement);
+        System.out.println("the second max element is " + secondMaxElement);
+    }
+
     /*
      * 
      * Time Complexity: O(NlogN), For sorting the array
@@ -81,6 +98,6 @@ public class SecondMaxInAnArray {
 
     public static void main(String[] args) {
         int arr[] = { 8, 6, 2, 4, 57, 9, 5, 1, 0, 43 };
-        SecondMaxInAnArray.getSecondLargestElement(arr);
+        SecondMaxInAnArray.findLargestAndSecondLargestInAnArray(arr);
     }
 }
