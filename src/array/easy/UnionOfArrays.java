@@ -28,7 +28,51 @@ public class UnionOfArrays {
         }
     }
 
+    private static ArrayList<Integer> unionInSortedArray(int[] arr1, int[] arr2) {
+        int i = 0;
+        int j = 0;
+        ArrayList<Integer> newArrayList = new ArrayList<>();
+        while (i < arr1.length && j < arr2.length) {
+            if (arr1[i] <= arr2[j]) {
+                if (newArrayList.isEmpty() || newArrayList.get(newArrayList.size() - 1) != arr1[i]) {
+                    newArrayList.add(arr1[i]);
+
+                }
+                i++;
+            } else {
+                if (newArrayList.isEmpty() || newArrayList.get(newArrayList.size() - 1) != arr2[j]) {
+                    newArrayList.add(arr2[j]);
+
+                }
+                j++;
+            }
+
+        }
+
+        while (i < arr1.length) {
+            if (newArrayList.get(newArrayList.size() - 1) != arr1[i]) {
+                newArrayList.add(arr1[i]);
+
+            }
+            i++;
+        }
+
+        while (j < arr2.length) {
+            if (newArrayList.get(newArrayList.size() - 1) != arr2[j]) {
+                newArrayList.add(arr2[j]);
+
+            }
+            j++;
+        }
+
+        return newArrayList;
+
+    }
+
     public static void main(String[] args) {
+        int[] arr1 = { 1, 2, 3, 4, 4, 5, 6 };
+        int[] arr2 = { 5, 6, 7, 8 };
+        System.out.println(UnionOfArrays.unionInSortedArray(arr1, arr2));
 
     }
 
