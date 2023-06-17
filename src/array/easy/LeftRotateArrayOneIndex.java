@@ -50,12 +50,38 @@ public class LeftRotateArrayOneIndex {
         return newArray;
     }
 
+    // private static int[] leftRotateArrayByOnePlace(int arr[]) {
+    // for(int i=0;i<arr.length;i++){
+
+    // }
+    // }
+
     public static void main(String[] args) {
         int arr[] = { 1, 2, 4, 9, 6, 7, 5 }; // 7
-        int newRotatedArray[] = LeftRotateArrayOneIndex.leftRotateArrayByNPlaces(arr, 9);
+        System.out.println(Arrays.toString(arr));
+        int newRotatedArray[] = LeftRotateArrayOneIndex.leftRotateArrayByNPlacesSecond(arr, 5);
 
         System.out.println(Arrays.toString(newRotatedArray));
 
+    }
+
+    private static int[] leftRotateArrayByNPlacesSecond(int arr[], int k) {
+        if (k == 0)
+            return arr;
+        k = k % arr.length;
+        if (k % arr.length == 0)
+            return arr;
+        int[] newArray = new int[arr.length];
+        for (int i = 0; i < arr.length - k; i++) {
+            newArray[i] = arr[i + k];
+        }
+
+        for (int i = 0; i < k; i++) {
+
+            newArray[newArray.length - k + i] = arr[i];
+        }
+
+        return newArray;
     }
 
 }
