@@ -36,7 +36,18 @@ public class RemoveDuplicatesSortArray {
 
     public static void main(String[] args) {
         int arr[] = { 1, 1, 2, 2, 3, 6, 8, 9, 15, 16 };
-        int newArray[] = RemoveDuplicatesSortArray.removeDuplicates(arr);
-        System.out.println(Arrays.toString(newArray));
+        // int newArray[] = RemoveDuplicatesSortArray.removeDuplicatedInArray(arr);
+        // System.out.println(Arrays.toString(newArray));
+
+        RemoveDuplicatesSortArray.removeDuplicatedInArray(arr);
+    }
+
+    private static void removeDuplicatedInArray(int arr[]) {
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < arr.length; i++) {
+            set.add(arr[i]);
+        }
+
+        System.out.println(set);
     }
 }
