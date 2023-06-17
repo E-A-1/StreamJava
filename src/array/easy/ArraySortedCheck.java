@@ -37,8 +37,18 @@ public class ArraySortedCheck {
         return true;
     }
 
+    private static boolean checkArraySorted(int arr[]) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
-        int arr[] = { 1, 12 };
-        System.out.println("the array sorting is " + ArraySortedCheck.isArraySortedEfficiently(arr));
+        int arr[] = { 1, 5, 8, 2, 12, 45, 78 };
+        System.out.println("the array sorting is " + ArraySortedCheck.checkArraySorted(arr));
     }
 }
