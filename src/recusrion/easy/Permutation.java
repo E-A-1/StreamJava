@@ -29,6 +29,7 @@ public class Permutation {
         List<List<Integer>> answerList = new ArrayList<>();
 
         Permutation.recursePermute(0, numArray, answerList);
+
         return answerList;
     }
 

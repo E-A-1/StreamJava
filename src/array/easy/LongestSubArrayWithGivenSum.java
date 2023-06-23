@@ -110,10 +110,32 @@ public class LongestSubArrayWithGivenSum {
         return maxLength;
     }
 
+    private static int longestSubArrayWithGivenSum(int arr[], int valueToFind) {
+        int maxSubArrayLength = Integer.MIN_VALUE;
+        int sum = arr[0];
+        int left = 0;
+        int right = 0;
+        while (right < arr.length) {
+            while (left <= right && sum > valueToFind) {
+                sum -= arr[left];
+                left++;
+            }
+
+            if (sum == valueToFind) {
+                maxSubArrayLength = Math.max(maxSubArrayLength, right - left + 1);
+            }
+
+            right++;
+            if (right < arr.length)
+                sum += arr[right];
+        }
+        return maxSubArrayLength;
+    }
+
     public static void main(String[] args) {
 
-        int arr[] = { 1, 2, 4, 4, 8, 2, 2, 2, 1, 1 };
+        int arr[] = { 9, 2, 4, 4, 8, 2, 2, 2, 1, 1 };
 
-        System.out.println(LongestSubArrayWithGivenSum.findLongestSubArrayUsingTwoPointer(arr, 6));
+        System.out.println(LongestSubArrayWithGivenSum.longestSubArrayWithGivenSum(arr, 7));
     }
 }

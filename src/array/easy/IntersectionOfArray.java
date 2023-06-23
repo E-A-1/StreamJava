@@ -1,11 +1,11 @@
 package array.easy;
 
 import java.util.ArrayList;
+import java.util.Vector;
 
 public class IntersectionOfArray {
 
     public static void findArrayIntersection(int arr1[], int arr2[]) {
-
         ArrayList<Integer> intersectionArray = new ArrayList<>();
 
         int i = 0;
