@@ -1,0 +1,46 @@
+In Java, FileWriter, FileOutputStream, and BufferedWriter are classes used for writing data to files, but they have some key differences in terms of functionality and usage.
+
+FileWriter:
+
+FileWriter is a class in the java.io package that writes characters to a file.
+It is primarily used for writing text data to a file, providing a convenient way to write characters to a file one at a time or in chunks.
+It internally uses the platform's default character encoding.
+Example usage:
+java
+
+FileWriter writer = new FileWriter("filename.txt");
+writer.write("Hello, World!");
+writer.close();
+
+FileOutputStream:
+
+FileOutputStream is a class in the java.io package that writes raw bytes to a file.
+It is used for writing all types of data, including binary data, to a file.
+It does not perform any character encoding and writes data in the form of bytes.
+Example usage:
+java
+
+FileOutputStream outputStream = new FileOutputStream("filename.txt");
+byte[] data = {72, 101, 108, 108, 111}; // "Hello"
+outputStream.write(data);
+outputStream.close();
+
+BufferedWriter:
+
+BufferedWriter is a class in the java.io package that writes text efficiently to a character-output stream, such as a file.
+It wraps an existing Writer (such as FileWriter) and provides methods for writing characters or strings to the output stream.
+It improves performance by buffering the data and reducing the number of I/O operations.
+Example usage:
+java
+
+FileWriter fileWriter = new FileWriter("filename.txt");
+BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+bufferedWriter.write("Hello, World!");
+bufferedWriter.close();
+In summary, FileWriter and FileOutputStream are used for writing characters and raw bytes to a file, respectively. On the other hand, BufferedWriter is used for writing text efficiently by buffering the output and is commonly used with FileWriter to write characters or strings to a file.
+
+
+
+
+
+
