@@ -1,0 +1,2 @@
+FileReader is designed specifically for reading characters from a file.
+It inherits from the InputStreamReader class and is optimized

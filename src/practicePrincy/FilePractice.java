@@ -11,6 +11,7 @@ public class FilePractice {
         FileWriter fileWriter = new FileWriter(file);
         fileWriter.write("hello");
         fileWriter.close();
+
         FileReader fileReader = new FileReader(file);
         int i;
         while ((i = fileReader.read()) != -1) {
